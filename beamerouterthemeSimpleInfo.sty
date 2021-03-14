@@ -1,0 +1,49 @@
+%% This part modified from beamerthemesimpleinfo.sty
+% Copyright 2016 by Hsuan-Tien Lin <htlin@csie.ntu.edu.tw>
+\mode<presentation>
+
+\setbeamercolor*{author in head/foot}{parent=palette tertiary}
+\setbeamercolor*{title in head/foot}{parent=palette secondary}
+\setbeamercolor*{date in head/foot}{parent=palette primary}
+
+\setbeamercolor*{section in head/foot}{parent=palette tertiary}
+\setbeamercolor*{subsection in head/foot}{parent=palette primary}
+
+\setbeamercolor*{section in head}{parent=palette tertiary, bg=}
+\setbeamercolor*{subsection in head}{parent=palette primary, bg=}
+
+\setbeamercolor*{section in toc}{parent=palette primary, bg=}
+\setbeamercolor*{subsection in toc}{parent=palette primary, bg=}
+
+\setbeamertemplate{enumerate items}[circle]
+
+\defbeamertemplate*{footline}{simpleinfo theme}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor\expandafter\beamer@ifempty\expandafter{\beamer@shortinstitute}{}{~~(\insertshortinstitute)}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.65\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.05\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot} \insertframenumber/\inserttotalframenumber
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+\defbeamertemplate*{headline}{simpleinfo theme}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=1.0\paperwidth,ht=2ex,dp=1.5ex,left]{section in head/foot}%
+    \usebeamerfont{section in head}\hspace*{2ex}\insertsectionhead\hspace*{1cm}\textit{\insertsubsectionhead}%
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+\setbeamersize{text margin left=1em,text margin right=1em}
+
+\mode
+<all>
