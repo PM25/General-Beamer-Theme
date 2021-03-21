@@ -2,44 +2,34 @@
 % Copyright 2016 by Hsuan-Tien Lin <htlin@csie.ntu.edu.tw>
 \mode<presentation>
 
-\setbeamercolor*{author in head/foot}{parent=palette tertiary}
-\setbeamercolor*{title in head/foot}{parent=palette secondary}
-\setbeamercolor*{date in head/foot}{parent=palette primary}
-
 \setbeamercolor*{section in head/foot}{parent=palette tertiary}
-\setbeamercolor*{subsection in head/foot}{parent=palette primary}
 
-\setbeamercolor*{section in head}{parent=palette tertiary, bg=}
-\setbeamercolor*{subsection in head}{parent=palette primary, bg=}
-
-\setbeamercolor*{section in toc}{parent=palette primary, bg=}
-\setbeamercolor*{subsection in toc}{parent=palette primary, bg=}
-
-\setbeamertemplate{enumerate items}[circle]
+\defbeamertemplate*{title page}{simpleinfo theme}
+{
+  \centering
+  \vspace*{3em}
+  \usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle\par
+  \vspace*{0.3em}
+  \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par
+  \vspace*{2em}
+  \usebeamerfont{author}\usebeamercolor[fg]{author}\insertauthor\par
+  \vspace*{0.5em}
+  \usebeamerfont{institute}\usebeamercolor[fg]{author}\insertinstitute\par
+  \vspace*{1.5em}
+  \usebeamerfont{date}\usebeamercolor[fg]{date}\insertdate\par
+}
 
 \defbeamertemplate*{footline}{simpleinfo theme}
 {
   \leavevmode%
   \hbox{%
-  \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
-    \usebeamerfont{author in head/foot}\insertshortauthor\expandafter\beamer@ifempty\expandafter{\beamer@shortinstitute}{}{~~(\insertshortinstitute)}
-  \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.65\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
-    \usebeamerfont{title in head/foot}\insertshorttitle
-  \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.05\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
-    \usebeamerfont{author in head/foot} \insertframenumber/\inserttotalframenumber
-  \end{beamercolorbox}}%
-  \vskip0pt%
-}
-
-\defbeamertemplate*{headline}{simpleinfo theme}
-{
-  \leavevmode%
-  \hbox{%
-  \begin{beamercolorbox}[wd=1.0\paperwidth,ht=2ex,dp=1.5ex,left]{section in head/foot}%
-    \usebeamerfont{section in head}\hspace*{2ex}\insertsectionhead\hspace*{1cm}\textit{\insertsubsectionhead}%
-  \end{beamercolorbox}}%
+    \begin{beamercolorbox}[wd=.9\paperwidth,ht=2.25ex,dp=1.5ex,left]{section in head/foot}%
+      \usebeamerfont{section in head/foot}\hspace*{.025\paperwidth}\insertsectionhead\hspace*{1cm}%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.1\paperwidth,ht=2.25ex,dp=1.5ex,center]{section in head/foot}%
+      \usebeamerfont{section in head/foot} \insertframenumber/\inserttotalframenumber
+    \end{beamercolorbox}%
+  }
   \vskip0pt%
 }
 

@@ -1,5 +1,4 @@
-Modified from Hsuan-Tien Lin's beamer template.
-Source: [BeamerTaiwan](https://github.com/hsuantien/beamerTaiwan).
+Modified from Hsuan-Tien Lin's beamer template (source: [BeamerTaiwan](https://github.com/hsuantien/beamerTaiwan)).
 
 ---
 

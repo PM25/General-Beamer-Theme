@@ -5,11 +5,12 @@
 
 \mode<presentation>
 
-\usecolortheme{DarkBlue}
-\usefonttheme{Simple}
+\usecolortheme{LightBlue}
+\usefonttheme{Large}
 \useinnertheme{circles}
 \useoutertheme{SimpleInfo}
 
+% faded color in head
 \AtBeginDocument{%
   {
     \usebeamercolor{section in head/foot}
@@ -26,24 +27,21 @@
 
 \addtoheadtemplate{\pgfuseshading{beamer@headfade}\vskip-2cm}{}
 
-%adjust title
+% adjust title
 \setbeamertemplate{frametitle}
 {
-  \vspace*{-1.5ex}
   \begin{center}
     \vbox{\strut\insertframetitle\strut}
   \end{center}
-  \vspace*{-3ex}
+  \vspace*{-1ex}
 }
 
-%% personal preferences of me (Pin-Yen Huang)
-\setbeamertemplate{footline}[page number]
+% \setbeamertemplate{footline}[page number] 
 \setbeamertemplate{navigation symbols}{} 
 \setbeamertemplate{blocks}[rounded][shadow=true]
 \setbeamertemplate{enumerate items}[default]
 \setbeamertemplate{section in toc}[sections numbered]
 \setbeamertemplate{subsection in toc}[default]
-%% end of personal preferences of Pin-Yen Huang
 
 \mode
 <all>
