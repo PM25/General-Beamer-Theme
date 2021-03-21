@@ -1,0 +1,32 @@
+\mode<presentation>
+
+\definecolor{DarkBlue}{cmyk}{0.7, 0.5, 0.1, 0.5}
+\definecolor{MyRed}{rgb}{0.93, 0.35, 0.35}
+\definecolor{MyGreen}{rgb}{0.37, 0.70, 0.60}
+\definecolor{MyBlue}{rgb}{0.012, 0.31, 0.45}
+
+\usecolortheme[named=DarkBlue]{structure}%
+
+\setbeamercolor*{alerted text}{fg=MyRed!50!red}%
+\setbeamercolor*{example text}{fg=MyGreen!50!black}%
+
+\setbeamercolor*{palette primary}{fg=DarkBlue!30!black,bg=DarkBlue!25!white}%
+\setbeamercolor*{palette secondary}{fg=DarkBlue!70!black,bg=white!60!DarkBlue}%
+\setbeamercolor*{palette tertiary}{fg=DarkBlue!80!black,bg=DarkBlue!30!white}%
+\setbeamercolor*{palette quaternary}{fg=DarkBlue,bg=white!20!DarkBlue}%
+
+\setbeamercolor*{title}{fg=DarkBlue!85!black}
+\setbeamercolor*{subtitle}{fg=DarkBlue!50!black}
+\setbeamercolor*{author}{fg=white!10!black}
+\setbeamercolor*{date}{fg=white!30!black}
+
+\setbeamercolor*{block title}{fg=white,bg=MyBlue}
+\setbeamercolor*{block title alerted}{use=alerted text, fg=white, bg=MyRed}
+\setbeamercolor*{block title example}{use=example text, fg=white, bg=MyGreen}
+
+\setbeamercolor*{block body}{parent=normal text,use=block title,bg=block title.bg!10!bg}
+\setbeamercolor*{block body alerted}{parent=normal text,use=block title alerted,bg=block title alerted.bg!10!bg}
+\setbeamercolor*{block body example}{parent=normal text,use=block title example,bg=block title example.bg!10!bg}
+
+\mode
+<all>
